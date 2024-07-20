@@ -1,0 +1,98 @@
+:root{
+    --tamano-de-la-fuente:  24px;
+    --color-fondo:  #D8DFE8;
+    --color-azul: #0A3871;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-azul);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 1em;
+    text-align: center;
+    background-color: var(--color-fondo);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+}
+
+.contenedor {
+    flex: 1;
+    display: flex;
+    gap: 1em; 
+    padding: 1em;
+    align-items: stretch;
+}
+
+.seccion-1, .seccion-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.seccion-1 {
+    padding: 1em;
+    margin: 1em 0;
+}
+
+.seccion-1 input {
+    width: 100%;
+    margin-bottom: 1em;
+    background: none; 
+    border: none; 
+    outline: none; 
+    font-size: 2em;
+    color: var(--color-azul);
+}
+
+.seccion-1 input::placeholder {
+    color: var(--color-azul);
+}
+
+.seccion-1 .botones {
+    display: flex;
+    gap: 1.5em;
+    margin-top: auto;
+}
+
+.seccion-1 .botones button {
+    padding: 24px;
+    border-radius: 24px;
+    width: 328px;
+
+}
+
+.boton-1 {
+    background-color: var(--color-azul);
+    color: white;
+    border: none;
+}
+
+.boton-2 {
+    border: 2px solid var(--color-azul);
+    color: var(--color-azul);
+    background-color: white;
+}
+
+.seccion-2 {
+    background-color: #f1f1f1;
+    max-width: 400px;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
