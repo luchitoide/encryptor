@@ -13,16 +13,18 @@
     <main>
       <div class="contenedor">
         <section class="seccion-1">
-          <input type="text" placeholder="Introduce texto aquí" />
+            <textarea id="texto" placeholder="Introduce texto aquí"></textarea>
+          
           <div class="botones">
-            <button class="boton-1">Encriptar</button>
-            <button class="boton-2">Desencriptar</button>
+            <button class="boton-1" onclick="encriptarTexto()">Encriptar</button>
+            <button class="boton-2" onclick="desencriptarTexto()">Desencriptar</button>
           </div>
         </section>
         <section class="seccion-2">
-          <p>No se encuentra ningun texto.</p>
+          <p id="resultado">No se encuentra ningun texto.</p>
         </section>
       </div>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>
