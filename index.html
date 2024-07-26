@@ -8,14 +8,14 @@
   </head>
   <body>
     <header>
-      <h1>Encriptador texto</h1>
+      <img src="./assets/Header.svg" alt="Icono Alura">
     </header>
     <main>
       <div class="contenedor">
         <section class="seccion-1">
-          <textarea id="texto" placeholder="Introduce texto aquí"></textarea>
+          <textarea id="texto" placeholder="Introduce texto aquí" oninput="ocultarElementos()"></textarea>
           <div class="parte-baja1">
-            <p>Solo letras minusculas y sin acentos</p>
+            <p>⚠️ Solo letras minusculas y sin acentos</p>
             <div class="botones">
               <button class="boton-1" onclick="encriptarTexto()">
                 Encriptar
@@ -32,7 +32,7 @@
             src="https://cdn.pixabay.com/photo/2018/01/04/15/51/404-error-3060993_1280.png"
             alt="Error imagen"
           />
-          <p id="resultado">No se encuentra ningun texto.</p>
+          <p id="resultado">No se encuentra ningun texto</p>
           <p id="texto-seccion-2">Ingresa el texto que desees encriptar o desencriptar</p>
           <button
             id="boton-copiar"

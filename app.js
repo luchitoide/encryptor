@@ -1,10 +1,5 @@
-textarea = getElementById("texto");
-
-textarea.addEventListener("input", () => {
-  if (textarea.value === "") {
-    placeholderImage.style.display = "block";
-  }
-});
+const mediaQuery = window.matchMedia("(max-width: 768px)");
+mediaQuery.addEventListener('change', manejarImagen);
 
 function encriptarTexto() {
   const texto = document.getElementById("texto").value;
@@ -51,13 +46,37 @@ function desencriptarTexto() {
 function mostrarElementos() {
   document.getElementById("imagen").style.display = "none";
   document.getElementById("texto-seccion-2").style.display = "none";
+  document.getElementById("resultado").style.textAlign = "start";
+  document.getElementById("resultado").style.fontWeight = "400";
+  document.getElementById("resultado").style.color = "var(--color-gris-claro)";
   document.getElementById("seccion-2").style.justifyContent = "space-between";
   document.getElementById("boton-copiar").style.display = "block";
 }
 
 function ocultarElementos() {
-  document.getElementById("imagen").style.display = "block";
-  document.getElementById("boton-copiar").style.display = "none";
+  const textarea = document.getElementById("texto");
+  if (textarea.value === "") {
+    document.getElementById("boton-copiar").style.display = "none";
+    document.getElementById("resultado").textContent =
+      "No se encuentra ningun texto";
+    document.getElementById("texto-seccion-2").style.display = "block";
+    document.getElementById("resultado").style.fontWeight = "600";
+    document.getElementById("resultado").style.color =
+      "var(--color-gris-oscuro)";
+    document.getElementById("seccion-2").style.justifyContent = "center";
+
+    
+    manejarImagen(mediaQuery)
+    
+  }
+}
+
+function manejarImagen(evento){
+  if (evento.matches) {
+    document.getElementById("imagen").style.display = "none";
+  } else {
+    document.getElementById("imagen").style.display = "block";
+  }
 }
 
 function copiarTexto() {
