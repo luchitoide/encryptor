@@ -14,20 +14,31 @@
       <div class="contenedor">
         <section class="seccion-1">
           <textarea id="texto" placeholder="Introduce texto aquí"></textarea>
-
-          <div class="botones">
-            <button class="boton-1" onclick="encriptarTexto()">
-              Encriptar
-            </button>
-            <button class="boton-2" onclick="desencriptarTexto()">
-              Desencriptar
-            </button>
+          <div class="parte-baja1">
+            <p>Solo letras minusculas y sin acentos</p>
+            <div class="botones">
+              <button class="boton-1" onclick="encriptarTexto()">
+                Encriptar
+              </button>
+              <button class="boton-2" onclick="desencriptarTexto()">
+                Desencriptar
+              </button>
+            </div>
           </div>
         </section>
-        <section class="seccion-2">
-          <img id="imagen" src="https://cdn.pixabay.com/photo/2018/01/04/15/51/404-error-3060993_1280.png" alt="Error imagen">
+        <section class="seccion-2" id="seccion-2">
+          <img
+            id="imagen"
+            src="https://cdn.pixabay.com/photo/2018/01/04/15/51/404-error-3060993_1280.png"
+            alt="Error imagen"
+          />
           <p id="resultado">No se encuentra ningun texto.</p>
-          <button id="boton-copiar" class="boton-copiar" onclick="copiarTexto()">
+          <p id="texto-seccion-2">Ingresa el texto que desees encriptar o desencriptar</p>
+          <button
+            id="boton-copiar"
+            class="boton-copiar"
+            onclick="copiarTexto()"
+          >
             Copiar
           </button>
         </section>
