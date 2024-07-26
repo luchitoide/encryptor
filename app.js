@@ -1,5 +1,5 @@
-const mediaQuery = window.matchMedia("(max-width: 768px)");
-mediaQuery.addEventListener('change', manejarImagen);
+const mediaQuery = window.matchMedia("(max-width: 1024px)");
+mediaQuery.addEventListener('change', ocultarElementos);
 
 function encriptarTexto() {
   const texto = document.getElementById("texto").value;

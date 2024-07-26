@@ -150,7 +150,7 @@ footer {
     bottom: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     header{
         padding: 3rem 1.5rem;
     }
@@ -175,7 +175,7 @@ footer {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 450px) {
     body {
         height: 150vh;
     }
